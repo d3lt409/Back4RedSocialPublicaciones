@@ -24,6 +24,7 @@ public class Service {
     }
 
     public Publicacion crear(CrearDTO dto) {
+        System.out.println(dto);
         Usuario usuario = this.usuarioRepository
                 .findById(dto.getUsuarioId())
                 .orElseThrow(

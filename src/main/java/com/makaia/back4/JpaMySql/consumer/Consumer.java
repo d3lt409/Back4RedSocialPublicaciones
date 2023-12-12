@@ -10,16 +10,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    @Autowired
-    Service publicacionService;
+    // @Autowired
+    // Service publicacionService;
 
 
-    @RabbitListener(queues = {"user_created"}) // user_created: Nombre de la cola que se quiere escuchar
-    public void receive(@Payload Long id){
-        System.out.println("Crear una publicación para el usuario " + id);
-        CrearDTO defaultP = new CrearDTO("Mi Primera Publicacion", "Contenido", id);
+    // @RabbitListener(queues = {"user_created"}) // user_created: Nombre de la cola que se quiere escuchar
+    // public void receive(@Payload Long id){
+    //     System.out.println("Crear una publicación para el usuario " + id);
+    //     CrearDTO defaultP = new CrearDTO("Mi Primera Publicacion", "Contenido", id);
 
-        this.publicacionService.crear(defaultP);
-    }
+    //     this.publicacionService.crear(defaultP);
+    // }
         
 }
